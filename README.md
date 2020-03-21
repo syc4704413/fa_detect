@@ -1,1 +1,16 @@
-训练
+__init__为初始化文件，将所有文件夹清空；
+get_faces为获取人脸的程序；
+get_feauture为标出特征点并切割出眼睛的程序；
+main_fd为主程序，多线程运行系统用到的程序；
+perclos_final为识别图像判断疲劳的程序；
+input_data表示为模型时导入数据的程序；
+model为卷积神经网络；
+train_and_val为训练模型的程序；
+test_accurate为检测训练好的模型准确率的程序。
+
+具体流程为
+训练模型：input_data→train_and_val→test_accurate
+其中train_and_val调用model作为神经网络结构。
+疲劳检测系统检测流程：__init__→main_fd
+其中main_fd中调用get_faces，get_feauture，perclos_final同时运行。
+ 
